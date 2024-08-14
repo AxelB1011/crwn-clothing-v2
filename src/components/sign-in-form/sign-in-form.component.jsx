@@ -62,7 +62,7 @@ const SignInForm = () => {
                     <Button type="submit">Sign In</Button>  
 
                     <Button type='button' buttonType='google' onClick={signInWithGoogle}>
-                        Google
+                        W/ Google 
                     </Button>
                 </div>
             </form>

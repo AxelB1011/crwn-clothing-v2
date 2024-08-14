@@ -25,9 +25,6 @@ googleProvider.setCustomParameters({
 });
 
 export const auth = getAuth(firsebaseApp);
-// export const signInWithGooglePopup = () => {
-//   return signInWithPopup(auth, googleProvider);
-// };
 export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
 export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
