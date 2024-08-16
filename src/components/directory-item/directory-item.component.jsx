@@ -1,9 +1,9 @@
-import './category-item.styles.scss'
+import './directory-item.styles.scss'
 
-const CategoryItem = ( { title, imageUrl } ) => {
+const DirectoryItem = ( { title, imageUrl } ) => {
     // const {title, imageUrl} = category;
     return ( 
-        <div className="category-container"> 
+        <div className="directory-item-container"> 
         <div 
           className="background-image" 
           style={{
@@ -11,7 +11,7 @@ const CategoryItem = ( { title, imageUrl } ) => {
           }}
         />
         {/* For dynamic CSS, we can append custom styles it by passing it to the style object. Key is the property we want to modify. */}
-        <div className="category-body-container">
+        <div className="directory-item-body">
           <h2> {title} </h2>
           <p> Shop Now </p>
         </div>
@@ -19,4 +19,4 @@ const CategoryItem = ( { title, imageUrl } ) => {
      )
 }
 
-export default CategoryItem;
+export default DirectoryItem;
