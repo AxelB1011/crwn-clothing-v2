@@ -6,11 +6,7 @@ import { UserProvider } from './contexts/user.context';
 import { CategoriesProvider } from './contexts/categories.context';
 import { CartProvider } from './contexts/cart.context';
 import reportWebVitals from './reportWebVitals';
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 // const router = createBrowserRouter([
 //   {

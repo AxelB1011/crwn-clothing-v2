@@ -27,10 +27,10 @@ const removeCartItem = (cartItems, productToRemove) => {
         );
     }
 
-    return cartItems.filter(item => item.id != productToRemove.id);
+    return cartItems.filter(item => item.id !== productToRemove.id);
 };
 
-const clearCartItem = (cartItems, productToClear) => cartItems.filter(item => item.id != productToClear.id);
+const clearCartItem = (cartItems, productToClear) => cartItems.filter(item => item.id !== productToClear.id);
 
 
 export const CartContext = createContext({

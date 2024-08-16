@@ -1,4 +1,4 @@
-import {Outlet, Link} from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 import { Fragment, useContext } from 'react';
 //Fragments let you group a list of children without adding extra nodes to the DOM.
 import { UserContext } from '../../contexts/user.context';
