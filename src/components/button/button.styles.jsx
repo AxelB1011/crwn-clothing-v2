@@ -28,6 +28,7 @@ export const BaseButton = styled.button`
 export const GoogleButton = styled(BaseButton)`
   background-color: #4285f4;
   color: white;
+  line-height: 25px;
 
   &:hover {
     background-color: #357ae8;
