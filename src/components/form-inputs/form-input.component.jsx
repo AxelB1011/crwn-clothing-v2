@@ -1,14 +1,14 @@
-import './form-input.styles.scss';
+import {FormInputLabel, Input, Group} from './form-input.styles';
 import PropTypes from 'prop-types';
 
 const FormInput = ( {label, ...otherProps} ) => {
     return (
-        <div className='group'>
-            <input className='form-input' {...otherProps} />
+        <Group>
+            <Input {...otherProps} />
             {/* Input needs to come before label because The subsequent-sibling combinator ( ~ , a tilde) separates two selectors and matches all instances of the second element that follow the first element (not necessarily immediately) and share the same parent element. */}
-            {label && (<label className={`${otherProps.value.length ? 'shrink' : ''} form-input-label`}>{label}</label>)}
-            {/* <label className={`${otherProps.value.length ? 'shrink' : ''} form-input-label`}>{label}</label> */}
-        </div>
+            {label && (<FormInputLabel shrink={otherProps.value.length}> {label} </FormInputLabel>)}
+
+        </Group>
     );
 };
 

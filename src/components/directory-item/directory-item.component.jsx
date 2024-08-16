@@ -1,21 +1,24 @@
-import './directory-item.styles.scss'
+import {DirectoryItemContainer, DirectoryItemBody, BackgroundImage} from './directory-item.styles'
+import { useNavigate } from 'react-router-dom';
 
-const DirectoryItem = ( { title, imageUrl } ) => {
-    // const {title, imageUrl} = category;
+const DirectoryItem = ({ category }) => {
+    const { imageUrl, title, route } = category;
+    const navigate = useNavigate()
+    const navigationHandler = () => navigate(route);
     return ( 
-        <div className="directory-item-container"> 
-        <div 
-          className="background-image" 
-          style={{
-            backgroundImage: `url(${imageUrl})`
-          }}
+        <DirectoryItemContainer onClick={navigationHandler}> 
+        <BackgroundImage
+          imageUrl={imageUrl}
+          // style={{
+          //   backgroundImage: `url(${imageUrl})`
+          // }}
         />
         {/* For dynamic CSS, we can append custom styles it by passing it to the style object. Key is the property we want to modify. */}
-        <div className="directory-item-body">
+        <DirectoryItemBody>
           <h2> {title} </h2>
           <p> Shop Now </p>
-        </div>
-      </div>
+        </DirectoryItemBody>
+      </DirectoryItemContainer>
      )
 }
 
