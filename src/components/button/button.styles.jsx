@@ -29,6 +29,7 @@ export const GoogleButton = styled(BaseButton)`
   background-color: #4285f4;
   color: white;
   line-height: 25px;
+  margin-left: 15px;
 
   &:hover {
     background-color: #357ae8;
