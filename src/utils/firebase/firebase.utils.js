@@ -81,12 +81,18 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
-  if (!email || !password) return;
+  if (!email || !password) {
+    alert("Missing required fields");
+    return;
+  }
   return await createUserWithEmailAndPassword(auth, email, password)
 };
 
 export const signInAuthUserWithEmailAndPassword = async (email, password) => {
-  if (!email || !password) return;
+  if (!email || !password) {
+    alert("User does not exist");
+    return;
+  }
   return await signInWithEmailAndPassword(auth, email, password)
 };
 
